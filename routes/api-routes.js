@@ -70,13 +70,14 @@ app.get("/api/event_data", function(req, res) {
 app.post("/api/new", function(req, res) {
  console.log('^^^^^^^^^^^^^^^^^^^^^^')
   console.log("Event Data:");
+  console.log(req.user.id);
   console.log(req.body);
 
   db.calendar.create({
     time: req.body.time,
     date: req.body.date,
     event: req.body.event,
-    UserId: req.body.UserId
+    UserId: req.user.id
   }).then(function(results) {
     res.end();
   });

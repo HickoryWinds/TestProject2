@@ -3,3 +3,79 @@ form.login {
   margin-top: 50px;
 }
 
+/* Background image */
+
+
+body {
+  background-image: url("../images/aaron-burden-tb4wis6XoQk-unsplash.jpg");
+  background-color: rgb(233, 224, 224)
+}
+
+
+.navbar,
+.nav-pills {
+  background-color: rgb(46, 20, 20);
+  color: rgb(180, 178, 178);
+}
+
+
+
+.jumbotron {
+  background-image: url("../images/annie-spratt-W6RXSc8OWN0-unsplash.jpg");
+  background-color: rgb(233, 224, 224);
+  color: rgb(210, 200, 200);
+}
+
+
+p,
+h2 {
+  color: white;
+  color: rgb(210, 200, 200);
+}
+
+/* section {
+  height: 100px;
+  background-image: url("../images/download-4.jpg");
+  background-blend-mode: lighten;
+  text-align: center;
+} */
+
+.leafbar {
+  line-height: 100px;
+  color: white;
+}
+
+/* " 
+johannes-plenio-RwHv7LgeC7s-unsplash.jpg
+annie-spratt-W6RXSc8OWN0-unsplash.jpg
+aaron-burden-tb4wis6XoQk-unsplash.jpg
+ */
+
+/* a:link {
+  color: blue;
+}
+
+/* Unvisited links
+a:visited {
+  color: purple;
+}
+
+/* Visited links */
+/* a:hover {
+  background: yellow;
+} */
+
+/* Hovered links */
+/* a:active {
+  color: red; */
+/* } */
+
+*/
+/* Active links */
+
+/* p:active {
+  background: #eee;
+} */
+
+*/
+/* Active paragraphs */

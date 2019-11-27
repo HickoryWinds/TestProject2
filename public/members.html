@@ -5,57 +5,163 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <!-- <link href="stylesheets/style.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="assets/stylesheets/style.css" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-
-<body>
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" class="active"><a href="/signup">Sign-Up</a></li>
-      <li role="presentation"><a href="/login">Already a member Log In</a></li>
-      <li role="presentation"><a href="/calendar">To Calendar</a></li>
-      <li role="presentation"><a href="/logout">Log Out</a></li>
-    </ul>
-    <!-- Navbar content -->
-  </nav>
-
-
-  <div class="jumbotron text-center">
-    <h1>Boomer Sandwich</h1>
-    <p>a cute quote a verycute quote</p>
-
+<!-- <div class="btn-toolbar">
+  <div class="btn-group">
+    ...
   </div>
+</div> -->
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3>Find a medical service near you</h3>
-        <p>put yelp ap here.</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>What will you cook tonight</h3>
-        <p>another api search here</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>what is ailing you</h3>
-        <p>web md api here..</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
+<body class="container">
+  <div class="navbar btn-toolbar btn-group">
+    <div class="navbar-inner">
+      <ul class="nav nav-pills nav-stacked">
+        <a href="/signup" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign
+          Up</a>
+        <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+      </ul>
     </div>
   </div>
 
 
+  <div class="jumbotron text-centerr">
+    <h1>Boomer Sandwich</h1>
+    <hr>
+    <p>Here we are, like the trees in autumn, stuck between summer and winter, full grown, well rooted, and about to
+      peak in color.
+    </p>
+    <p> We take care of the wild nature and riotous growth of summer in our children.
+    </p>
+    <p>We fear the path forward, fallen leaves, broken branches, ice storms, all seen in the face of our aging parents.
+    </p>
+    <p>
+      Once the Baby Boomers, we are now the fall generation and everything falls on us.
+    </p>
+  </div>
+
+  <div>
+    <section>
+      <h2 class="leafbar"> Hey Booomer Sandwich people! Use a little help. Explore our webiste to find the resources you
+        need. </h2>
+    </section>
+    <hr>
 
 
-  </div>
-  </div>
+    <div class="row">
+
+      <div class="col-sm-4">
+        <h3>Find a medical service near you</h3>
+        <p>Search here for a doctor, dentist or drugstore near you.</p>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">search by zip code</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg">
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <h3>What will you cook tonight</h3>
+        <p>Follow this lnk to find recipes with ingredients you have in hand</p>
+        <p>Search button connected to cooking api.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <h3>what is ailing you</h3>
+        <p>web md api here..</p>
+        <p>TYpe in your symptons here</p>
+      </div>
+    </div>
+
+    <section>
+      <h2 class="leafbar">Find Other Useful Resources Below </h2>
+    </section>
+
+    <!-- <div class="row">
+    <div class="col-2 "><img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+    <div class="col-2 "><img class=" img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+    <div class="col-2 "><img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+    <div class="col-2 "><img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+    <div class="col-2 "><img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+    <div class="col-2 "><img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+    </div>
+  </div> -->
+
+
+    <div class="row">
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-thumbnail img-fluid" src="./assets/images/leaf200X200.jpg" alt="">
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 </body>

@@ -32,5 +32,3 @@ module.exports = function(sequelize, DataTypes){
     };
     return calendar;
 };
-    
-console.log('10');

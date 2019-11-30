@@ -4,10 +4,11 @@ $(document).ready(function () {
   // console.log('111111111111');
   // console.log(src);
 
-  // find drugs stores using yelp api when 'drug store' button clicked
+  // find drugs stores using yelp api when 'drugstore' button clicked
   $('#drugstore').click(findDrugStore);
 
-  function findDrugStore() {
+  function findDrugStore(){
+    console.log('in here');
     // yelp works
     var yelpApiKey = 'oy6hhHsq3Rftgnl-vLTLO0vfP8VKnoGjq4a_AhrqhbfG4Q3Mothi8_PzIv_GmBntG9J0gBmx04lCPmhZi2xn4mJW_CRHtohDxdhGOoUS4GGErey7MesWAQLgAYWBXXYx';
     var queryURL = "https://cors-anywhere.herokuapp.com/http://api.yelp.com/v3/businesses/search?term=drugstores&location=Akron, OH";
@@ -34,15 +35,15 @@ $(document).ready(function () {
       }
     });
   }
+  
+  // when 'x' or 'close' button clicked, remove search results
+  $('#closer1').click(clearIt);
+  $('#closer2').click(clearIt);
+  // clearIt removes search results
+  function clearIt() {
+    console.log('???????????')
+    $('#results').empty();
+  }
+  
 });
-
-// when 'x' or 'close' button clicked, remove search results
-$('#closer1').click(clearIt);
-$('#closer2').click(clearIt);
-// clearIt removes search results
-function clearIt() {
-  console.log('???????????')
-  $('#results').empty();
-}
-
 

@@ -1,17 +1,22 @@
+// use dotenv to keep passphrases hidden from public view
+require("dotenv").config();
+// use keys.js to keep passphrases hidden
+var keys = require("../keys.js");
+
 module.exports = {
 
     
     "development": {
-    "username": "root",
-    "password": "root",
-    "database": "passport_demo",
+    "username": keys.database.username,
+    "password": keys.database.password,
+    "database": keys.database.database,
     "host": "127.0.0.1",
     "dialect": "mysql"
 },
 "test": {
-    "username": "root",
-    "password": "rootroot",
-    "database": "database_test",
+    "username": keys.database.username,
+    "password": keys.database.password,
+    "database": keys.database.database,
     "host": "127.0.0.1",
     "dialect": "mysql"
 },

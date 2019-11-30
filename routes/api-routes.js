@@ -68,18 +68,66 @@ app.get("/api/event_data", function(req, res) {
 
 // Add an event
 app.post("/api/new", function(req, res) {
- console.log('^^^^^^^^^^^^^^^^^^^^^^')
-  console.log("Event Data:");
-  console.log(req.body);
+  console.log('^^^^^^^^^^^^^^^^^^^^^^')
+   console.log("Event Data:");
+   console.log(req.user.id);
+   console.log(req.body);
+ 
+   db.calendar.create({
+     // time: req.body.time,
+     // date: req.body.date,
+     month: req.body.month,
+     day: req.body.day,
+     year: req.body.year,
+     hour: req.body.hour,
+     min: req.body.min,
+     ampm: req.body.ampm,
+     event: req.body.event,
+     UserId: req.user.id
+   }).then(function(results) {
+     res.end();
+   });
+ 
+ });
+ 
+   // DELETE route for deleting todos. We can get the id of the todo to be deleted from
+   // req.params.id
+   app.delete("/api/event_del/:id", function(req, res) {
+     // We just have to specify which event we want to destroy with "where"
+     db.calendar.destroy({
+       where: {
+         id: req.params.id
+       }
+     }).then(function(entries) {
+       res.json(entries);
+     });
+ 
+   });
+ 
+   // PUT route for updating entries. We can get the updated entry data from req.body
+   app.put("/api/event_update/:id", function(req, res) {
+     console.log('req');
+     console.log(req.body);
+     console.log(req.params);
+     // Update takes in an object describing the properties we want to update, and
+     // we use where to describe which objects we want to update
+     db.calendar.update({
+       // month: req.body.month,
+       // day: req.body.day,
+       // year: req.body.year,
+       // hour: req.body.hour,
+       // min: req.body.min,
+       // ampm: req.body.ampm,
+       // event: req.body.event,
+       event: req.body.event,
+       // UserId: req.params.id
+     }, {
+       where: {
+         id: req.params.id
+       }
+     }).then(function(entries) {
+       res.json(entries);
+     });
+   });
 
-  db.calendar.create({
-    time: req.body.time,
-    date: req.body.date,
-    event: req.body.event,
-    UserId: req.user.id
-  }).then(function(results) {
-    res.end();
-  });
-
-});
 };

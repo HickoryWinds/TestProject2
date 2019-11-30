@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  // Getting references to our form and input
+  // get references to form and input
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
-  // When the signup button is clicked, we validate the email and password are not blank
+  // when signup button is clicked, validate email and password are not blank
   signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
@@ -15,14 +15,14 @@ $(document).ready(function () {
     if (!userData.email || !userData.password) {
       return;
     }
-    // If we have an email and password, run the signUpUser function
+    // if email and password in form, run signUpUser function
     signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  // Otherwise we log any errors
+  // posts to signup route. if successful, redirected to the calendar page
+  // otherwise log any errors
   function signUpUser(email, password) {
     $.post("/api/signup", {
         email: email,
@@ -30,13 +30,13 @@ $(document).ready(function () {
       })
       .then(function (data) {
         window.location.replace("/calendar");
-        // If there's an error, handle it by throwing up a bootstrap alert
+        // if error, handle by throwing bootstrap alert
       })
       .catch(handleLoginErr);
   }
-
+  // shows alert with error message
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert.msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
 });

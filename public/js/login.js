@@ -14,6 +14,7 @@ $(document).ready(function () {
     };
 
     if (!userData.email || !userData.password) {
+      alert('Must enter enter and password.')
       return;
     }
 
@@ -36,6 +37,7 @@ $(document).ready(function () {
         // if error, log the error
       })
       .catch(function (err) {
+        alert('Invalid email/password combination.')
         console.log(err);
       });
   }

@@ -13,6 +13,7 @@ $(document).ready(function () {
     };
 
     if (!userData.email || !userData.password) {
+      alert('Must enter email and password.')
       return;
     }
     // if email and password in form, run signUpUser function
